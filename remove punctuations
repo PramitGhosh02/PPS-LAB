@@ -1,0 +1,10 @@
+import string
+
+def remove_punctuations(sentence):
+
+    return sentence.translate(str.maketrans("", "", string.punctuation))
+
+sentence = input()
+
+print(remove_punctuations(sentence))
+
