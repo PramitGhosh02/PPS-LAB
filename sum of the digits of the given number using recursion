@@ -1,0 +1,8 @@
+sum=0
+def Sumof(n):
+	if(n==0):
+		return 0
+	return (n%10 + Sumof(int(n/10)))
+n=int(input())
+sum=Sumof(n)
+print(sum)
