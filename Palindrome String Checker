@@ -1,0 +1,10 @@
+def is_palindrome(s):
+    if s == s[::-1]:
+        return "palindrome"
+    else:
+        return "not a palindrome"
+
+str = input()
+
+print(is_palindrome(str))
+
