@@ -1,0 +1,23 @@
+def generate_fibonacci_terms(n):
+    fib_sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        fib_sequence.append(a)
+        a, b = b, a + b
+    return fib_sequence
+def main():
+    try:
+        num_terms = int(input("Enter the max value: "))
+        if num_terms > 0:
+            fibonacci_sequence = fibonacci_module.generate_fibonacci_terms(num_terms)
+            print(f"Fibonacci series upto {num_terms} :")
+            for num in fibonacci_sequence:
+                print(num, end=" ")
+            print()
+        else:
+            print("Please enter a positive integer")
+    except ValueError:
+        print("Please enter a valid integer")
+
+if __name__ == "__main__":
+    main()
