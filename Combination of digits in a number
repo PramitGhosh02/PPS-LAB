@@ -1,0 +1,20 @@
+from itertools import permutations
+
+digit1 = input("digit1 (0-9): ")
+digit2 = input("digit2 (0-9): ")
+digit3 = input("digit3 (0-9): ")
+
+if digit1.isdigit() and digit2.isdigit() and digit3.isdigit():
+    num1 = int(digit1)
+    num2 = int(digit2)
+    num3 = int(digit3)
+    if 0 <= num1 <= 9 and 0 <= num2 <= 9 and 0 <= num3 <= 9:
+        digits = [digit1, digit2, digit3]
+        combinations = permutations(digits)
+        for combination in combinations:
+            print(''.join(combination))
+    else:
+        print("Invalid")
+else:
+    print("Invalid")
+
